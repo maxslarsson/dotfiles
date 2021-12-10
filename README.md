@@ -13,7 +13,7 @@ sh -c "$(curl -fsLS git.io/chezmoi)" -- init --one-shot maxslarsson
 In `fish`, run this command:
 
 ```fish
-sh -c "$(curl -fsLS git.io/chezmoi)" -- init --one-shot maxslarsson
+sh -c "(curl -fsLS git.io/chezmoi)" -- init --one-shot maxslarsson
 ```
 
 As part of the install script, `chezmoi` will install itself with brew, not from the script.
