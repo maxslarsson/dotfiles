@@ -1,13 +1,12 @@
-{{$fullname := promptString "Full name"}}
-{{$email := promptString "Email"}}
-
-{{ $homebrew_with_sudo := promptBool "(IGNORE IF NOT ON A MAC) Install Homebrew with sudo" }}
+{{- $fullname := promptString "Full name" -}}
+{{- $email := promptString "Email" -}}
+{{- $has_root := promptBool "Do you have root access (y/n)" -}}
 
 [data]
     fullname = {{ $fullname | quote }}
     email = {{ $email | quote }}
-    homebrew_with_sudo = {{ $homebrew_with_sudo }}
+    has_root = {{ $has_root }}
 
 [git]
     autoCommit = true
-    autoPush = true  # be careful, in case I accidentally commit and push a secret
+    autoPush = true  # be careful so that I do not commit a secret

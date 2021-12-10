@@ -1,21 +1,31 @@
 # Dotfiles
 
+⚙️  Collection of configuration files for various different programs
+
 ## Installing on a new machine
 
-In any shell, run
+In a POSIX-compliant shell such as `bash` or `sh`, run this command:
+
+```bash
+sh -c "$(curl -fsLS git.io/chezmoi)" -- init --one-shot maxslarsson
+```
+
+In `fish`, run this command:
 
 ```fish
 sh -c "$(curl -fsLS git.io/chezmoi)" -- init --one-shot maxslarsson
 ```
 
-As part of the install script, `chezmoi` will install itself with brew.
+As part of the install script, `chezmoi` will install itself with brew, not from the script.
 
 ## To save changes
 
 In `fish` shell, run
 
 ```fish
-chezmoi re-add; chezmoi update; chezmoi git push
+chezmoi re-add
+chezmoi update
+chezmoi git push
 ```
 
 Breaking it down,
@@ -30,8 +40,5 @@ Breaking it down,
 ## TODO
 
 - Split the one large .sh file into multiple scripts in a scripts/ directory
-- maybe manually 'brew install gnupg' if not root bc it doesn't work otherwise (brew bundle decides to skip it)
-- brew install nvim if not already installed
-- nvim config
-- fish config (from scratch ish!)
+- My config for nvim
 
