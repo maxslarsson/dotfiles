@@ -1,14 +1,21 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
 SETUVAR --export --path CMAKE_PREFIX_PATH:/Users/student/\x2ehomebrew/
-SETUVAR --export --path CPATH:/Users/student/\x2ehomebrew/include
+SETUVAR --export --path CPATH:/Users/student/\x2ehomebrew/include\x1e/Applications/Xcode\x2eapp/Contents/Developer/Toolchains/XcodeDefault\x2exctoolchain/usr/include/
+SETUVAR --export CPPFLAGS:\x2dI/Users/student/\x2ehomebrew/opt/lapack/include
 SETUVAR --export EDITOR:nvim
-SETUVAR LDFLAGS:\x2dL/Users/student/\x2ehomebrew/opt/llvm/lib\x20\x2dWl\x2c\x2drpath\x2c/Users/student/\x2ehomebrew/opt/llvm/lib
+SETUVAR --export --path GOPATH:/Users/student/\x2ego
+SETUVAR --export HOMEBREW_CASK_OPTS:\x2d\x2dappdir\x3d\x7e/Applications/
+SETUVAR --export LDFLAGS:\x2dL/Users/student/\x2ehomebrew/opt/llvm/lib\x20\x2dWl\x2c\x2drpath\x2c/Users/student/\x2ehomebrew/opt/llvm/lib\x1e\x2dL/Users/student/\x2ehomebrew/opt/lapack/lib
 SETUVAR --export --path LIBRARY_PATH:/Users/student/\x2ehomebrew/lib
 SETUVAR --path LOCATE_PATH:/Users/student/\x2elocate\x2edatabase
+SETUVAR --export --path PKG_CONFIG_PATH:/Users/student/\x2ehomebrew/opt/lapack/lib/pkgconfig
 SETUVAR __fish_initialized:3100
+SETUVAR _fish_abbr_c:clear
 SETUVAR _fish_abbr_copy:pbcopy
 SETUVAR _fish_abbr_gg:lazygit
+SETUVAR _fish_abbr_l:ls\x20\x2dlAFh
+SETUVAR _fish_abbr_lmk:latexmk
 SETUVAR _fish_abbr_paste:pbpaste
 SETUVAR _fish_abbr_v:nvim
 SETUVAR _fish_abbr_vi:nvim
@@ -44,4 +51,4 @@ SETUVAR fish_pager_color_completion:\x1d
 SETUVAR fish_pager_color_description:B3A06D\x1eyellow
 SETUVAR fish_pager_color_prefix:white\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
-SETUVAR fish_user_paths:/Users/student/dev\x1e/Users/student/\x2eemacs\x2ed/bin\x1e/Users/student/\x2ehomebrew/sbin\x1e/Users/student/\x2ehomebrew/opt/grep/libexec/gnubin\x1e/Users/student/\x2ecargo/bin\x1e/usr/libexec\x1e/Users/student/Applications/Chia\x2eapp/Contents/Resources/app\x2easar\x2eunpacked/daemon\x1e/Users/student/\x2epoetry/bin\x1e/Users/student/\x2epyenv/shims\x1e/Users/student/bin\x1e/Users/student/\x2egem/ruby/2\x2e6\x2e0/bin\x1e/Users/student/\x2ehomebrew/bin
+SETUVAR fish_user_paths:/Users/student/\x2ehomebrew/opt/llvm/bin\x1e/Users/student/\x2ego/bin\x1e/Users/student/\x2eemacs\x2ed/bin\x1e/Users/student/\x2ecargo/bin\x1e/usr/libexec\x1e/Users/student/Applications/Chia\x2eapp/Contents/Resources/app\x2easar\x2eunpacked/daemon\x1e/Users/student/\x2epoetry/bin\x1e/Users/student/\x2epyenv/shims\x1e/Users/student/bin\x1e/Users/student/\x2egem/ruby/2\x2e6\x2e0/bin\x1e/Users/student/\x2ehomebrew/bin
