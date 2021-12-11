@@ -2,6 +2,8 @@
 
 ⚙️  Collection of configuration files for various different programs
 
+Note: Much of this was taken from [Thomas Breydo's dotfiles](https://github.com/thomasbreydo/dotfiles). Make sure to check his [dotfiles](https://github.com/thomasbreydo/dotfiles) out as well.
+
 ## Installing on a new machine
 
 In a POSIX-compliant shell such as `bash` or `sh`, run this command:
@@ -36,9 +38,7 @@ Breaking it down,
 
 - `git push` pushes changes
 
-
 ## TODO
 
 - Split the one large .sh file into multiple scripts in a scripts/ directory
 - My config for nvim
-
