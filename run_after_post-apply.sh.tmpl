@@ -189,12 +189,14 @@ defaults write com.googlecode.iterm2 PrefsCustomFolder ~/.config/iterm2
 
 
 #####################################################
-# INSTALL EMACS #####################################
+# INSTALL DOOM EMACS ################################
 #####################################################
 
-if [ ! -d "~/.emacs.d" ] ; then
+if [ ! -d "$HOME/.emacs.d" ]; then
 	git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
-	~/.emacs.d/bin/doom install
+	~/.emacs.d/bin/doom install 
+else
+	chezlog "Error installing Doom Emacs, ~/.emacs.d already exists!"
 fi
 
 #####################################################
