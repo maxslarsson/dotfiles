@@ -138,7 +138,7 @@ if [[ $SHELL != `which fish` ]]; then
     chezlog "Login shell is currently $SHELL"
     chezlog "Attempting to set the login shell to $(which fish)"
     while ! chsh -s `which fish`; do
-        if ! prompt_yn "Failed, try again"; then
+        if prompt_yn "Failed, try again"; then
             break;
         fi
         chezlog "Trying again"
@@ -192,8 +192,10 @@ defaults write com.googlecode.iterm2 PrefsCustomFolder ~/.config/iterm2
 # INSTALL EMACS #####################################
 #####################################################
 
-git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
-~/.emacs.d/bin/doom install
+if [ ! -d "~/.emacs.d" ] ; then
+	git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
+	~/.emacs.d/bin/doom install
+fi
 
 #####################################################
 #####################################################
