@@ -1,0 +1,152 @@
+[
+	{
+		"name": "TEXT",
+		"value": "Preparing request to http://localhost:8080/new",
+		"timestamp": 1647742414634
+	},
+	{
+		"name": "TEXT",
+		"value": "Current time is 2022-03-20T02:13:34.634Z",
+		"timestamp": 1647742414634
+	},
+	{
+		"name": "TEXT",
+		"value": "Using default HTTP version",
+		"timestamp": 1647742414634
+	},
+	{
+		"name": "TEXT",
+		"value": "Disable timeout",
+		"timestamp": 1647742414634
+	},
+	{
+		"name": "TEXT",
+		"value": "Enable automatic URL encoding",
+		"timestamp": 1647742414634
+	},
+	{
+		"name": "TEXT",
+		"value": "Enable SSL validation",
+		"timestamp": 1647742414634
+	},
+	{
+		"name": "TEXT",
+		"value": "Enable cookie sending with jar of 0 cookies",
+		"timestamp": 1647742414635
+	},
+	{
+		"name": "TEXT",
+		"value": "STATE: INIT => CONNECT handle 0x7000842808; line 1789 (connection #-5000)\n",
+		"timestamp": 1647742414636
+	},
+	{
+		"name": "TEXT",
+		"value": "Found bundle for host localhost: 0x7002af0a08 [serially]\n",
+		"timestamp": 1647742414636
+	},
+	{
+		"name": "TEXT",
+		"value": "Can not multiplex, even if we wanted to!\n",
+		"timestamp": 1647742414636
+	},
+	{
+		"name": "TEXT",
+		"value": "Re-using existing connection! (#2) with host localhost\n",
+		"timestamp": 1647742414636
+	},
+	{
+		"name": "TEXT",
+		"value": "Connected to localhost (127.0.0.1) port 8080 (#2)\n",
+		"timestamp": 1647742414636
+	},
+	{
+		"name": "TEXT",
+		"value": "STATE: CONNECT => DO handle 0x7000842808; line 1843 (connection #2)\n",
+		"timestamp": 1647742414636
+	},
+	{
+		"name": "HEADER_OUT",
+		"value": "POST /new HTTP/1.1\r\nHost: localhost:8080\r\nUser-Agent: insomnia/2022.2.0\r\nContent-Type: application/x-www-form-urlencoded\r\nAccept: */*\r\nContent-Length: 71\r\n\r\n",
+		"timestamp": 1647742414636
+	},
+	{
+		"name": "DATA_OUT",
+		"value": "title=test&content=content&_csrf=wRnD38ok-i0Kb8b5bame_tsxjj2wbwA0oUx0&=",
+		"timestamp": 1647742414636
+	},
+	{
+		"name": "TEXT",
+		"value": "STATE: DO => DID handle 0x7000842808; line 2077 (connection #2)\n",
+		"timestamp": 1647742414636
+	},
+	{
+		"name": "TEXT",
+		"value": "STATE: DID => PERFORMING handle 0x7000842808; line 2196 (connection #2)\n",
+		"timestamp": 1647742414636
+	},
+	{
+		"name": "TEXT",
+		"value": "Mark bundle as not supporting multiuse\n",
+		"timestamp": 1647742414637
+	},
+	{
+		"name": "TEXT",
+		"value": "HTTP 1.1 or later with persistent connection\n",
+		"timestamp": 1647742414637
+	},
+	{
+		"name": "HEADER_IN",
+		"value": "HTTP/1.1 403 Forbidden\r\n",
+		"timestamp": 1647742414637
+	},
+	{
+		"name": "HEADER_IN",
+		"value": "content-type: application/json; charset=utf-8\r\n",
+		"timestamp": 1647742414637
+	},
+	{
+		"name": "HEADER_IN",
+		"value": "content-length: 70\r\n",
+		"timestamp": 1647742414637
+	},
+	{
+		"name": "HEADER_IN",
+		"value": "Date: Sun, 20 Mar 2022 02:13:34 GMT\r\n",
+		"timestamp": 1647742414637
+	},
+	{
+		"name": "HEADER_IN",
+		"value": "Connection: keep-alive\r\n",
+		"timestamp": 1647742414637
+	},
+	{
+		"name": "HEADER_IN",
+		"value": "Keep-Alive: timeout=5\r\n",
+		"timestamp": 1647742414637
+	},
+	{
+		"name": "HEADER_IN",
+		"value": "\r\n",
+		"timestamp": 1647742414637
+	},
+	{
+		"name": "TEXT",
+		"value": "Received 70 B chunk",
+		"timestamp": 1647742414637
+	},
+	{
+		"name": "TEXT",
+		"value": "STATE: PERFORMING => DONE handle 0x7000842808; line 2395 (connection #2)\n",
+		"timestamp": 1647742414637
+	},
+	{
+		"name": "TEXT",
+		"value": "multi_done\n",
+		"timestamp": 1647742414637
+	},
+	{
+		"name": "TEXT",
+		"value": "Connection #2 to host localhost left intact\n",
+		"timestamp": 1647742414637
+	}
+]

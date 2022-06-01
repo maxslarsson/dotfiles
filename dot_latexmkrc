@@ -1,2 +1,0 @@
-$pdf_mode = 1;
-$clean_ext = 'synctex.gz synctex(busy)';

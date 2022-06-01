@@ -1,0 +1,20 @@
+[user]
+    email = maxslarsson@gmail.com
+    name = Max Larsson
+
+[merge]
+    conflictStyle = diff3
+
+[magit]
+    hideCampaign = true
+
+[init]
+    defaultBranch = main
+
+[commit]
+    gpgsign = true
+[gpg]
+	program = gpg
+[pull]
+	rebase = false
+	ff = only
