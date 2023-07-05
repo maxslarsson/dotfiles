@@ -1,5 +1,5 @@
-env:
-  TERM: xterm-256color
+# env:
+#   TERM: xterm-256color
 
 window:
   padding:
@@ -55,10 +55,10 @@ key_bindings:  # Note: \x02 is control-b (tmux leader)
   - { key: Return,     mods: Command,                    chars: "\x02z"           }  # toggle full-size zoom on current pane
   - { key: Return,     mods: Shift|Command,              chars: "\x02!"           }  # create new window from current pane
 
-  - { key: H,          mods: Command,                    chars: "\x02h"           }  # select pane
-  - { key: J,          mods: Command,                    chars: "\x02j"           }  # .
-  - { key: K,          mods: Command,                    chars: "\x02k"           }  # .
-  - { key: L,          mods: Command,                    chars: "\x02l"           }  # .
+  - { key: H,          mods: Command,                    chars: "\x08"           }  # select pane
+  - { key: J,          mods: Command,                    chars: "\x0a"           }  # .
+  - { key: K,          mods: Command,                    chars: "\x0b"           }  # .
+  - { key: L,          mods: Command,                    chars: "\x0c"           }  # .
 
   - { key: H,          mods: Shift|Command,              chars: "\x02\x08"        }  # resize pane
   - { key: J,          mods: Shift|Command,              chars: "\x02\x0a"        }  # .
