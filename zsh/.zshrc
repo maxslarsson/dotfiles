@@ -10,6 +10,7 @@ bindkey -v
 # Path
 export PATH="/opt/homebrew/bin:$PATH"
 export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 
 # Plugins
 source /opt/homebrew/share/antigen/antigen.zsh
@@ -18,6 +19,8 @@ antigen bundle zsh-users/zsh-autosuggestions # Fish-like auto suggestions
 antigen apply
 
 # Initialize aliases
+alias l="ls -alh"
+alias c="clear"
 alias t="tmux-sessionizer"
 alias v="nvim"
 alias gg="lazygit"
