@@ -7,10 +7,14 @@ zle_highlight=('paste:none')
 # Vim like shell
 bindkey -v
 
-# Path
-export PATH="/opt/homebrew/bin:$PATH"
-export PATH="$HOME/bin:$PATH"
-export PATH="$HOME/.local/bin:$PATH"
+# Set variables
+export LANG="en_US.UTF-8"
+
+# C flags
+# export LDFLAGS="$LDFLAGS -L$(brew --prefix)/lib" 
+# export CFLAGS="$CFLAGS -I$(brew --prefix)/include" 
+# export CPPFLAGS="$CPPFLAGS -I$(brew --prefix)/include"
+export LD_LIBRARY_PATH="/usr/local/lib"
 
 # Plugins
 source /opt/homebrew/share/antigen/antigen.zsh
@@ -24,6 +28,8 @@ alias c="clear"
 alias t="tmux-sessionizer"
 alias v="nvim"
 alias gg="lazygit"
+alias rm="trash"
+alias idf='. $HOME/dev/esp-idf/export.sh'
 
 # Initiailize functions
 mdcd ()
@@ -50,3 +56,14 @@ eval "$(zoxide init zsh)"
 # Initialize prompt
 eval "$(starship init zsh)"
 
+
+export STM32CubeMX_PATH=/Applications/STMicroelectronics/STM32CubeMX.app/Contents/Resources
+
+
+# pnpm
+export PNPM_HOME="/Users/maxlarsson/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

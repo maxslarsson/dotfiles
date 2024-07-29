@@ -30,8 +30,8 @@ require('lazy').setup({
   --'tpope/vim-fugitive',
   --'tpope/vim-rhubarb',
 
-  -- Vim Tmux Navigator
   'christoomey/vim-tmux-navigator',
+  'mbbill/undotree',
 
   -- Detect tabstop and shiftwidth automatically
   'tpope/vim-sleuth',
@@ -72,7 +72,7 @@ require('lazy').setup({
   },
 
   -- Useful plugin to show you pending keybinds.
-  { 'folke/which-key.nvim',          opts = {} },
+  { 'folke/which-key.nvim', opts = {} },
   {
     -- Adds git releated signs to the gutter, as well as utilities for managing changes
     'lewis6991/gitsigns.nvim',
@@ -158,12 +158,24 @@ require('lazy').setup({
 
 -- [[ Setting options ]]
 -- See `:help vim.o`
--- NOTE: You can change these options as you wish!
+
+-- Set shift width to 4 spaces
+vim.o.shiftwidth = 4
+
+-- Set tab width to 4 columns
+vim.o.tabstop = 4
+
+-- Use space characters instead of tabs
+vim.o.expandtab = true
+
+-- Do not let cursor scroll below or above N number of lines when scrolling.
+vim.o.scrolloff = 10
 
 -- Set highlight on search
 vim.o.hlsearch = false
 
--- Make line numbers default
+-- Make relative line numbers default
+vim.wo.relativenumber = true
 vim.wo.number = true
 
 -- Enable mouse mode
@@ -314,6 +326,9 @@ require('nvim-treesitter.configs').setup {
   },
 }
 
+-- Undotree
+vim.keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle)
+
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
@@ -422,6 +437,8 @@ cmp.setup {
       luasnip.lsp_expand(args.body)
     end,
   },
+  -- TODO: Maybe use Control+J/K to select prev items
+  -- TODO: Maybe use escape to hide window, then exit insert mode
   mapping = cmp.mapping.preset.insert {
     ['<C-n>'] = cmp.mapping.select_next_item(),
     ['<C-p>'] = cmp.mapping.select_prev_item(),
