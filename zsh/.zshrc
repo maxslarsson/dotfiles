@@ -11,10 +11,11 @@ bindkey -v
 export LANG="en_US.UTF-8"
 
 # C flags
-# export LDFLAGS="$LDFLAGS -L$(brew --prefix)/lib" 
-# export CFLAGS="$CFLAGS -I$(brew --prefix)/include" 
-# export CPPFLAGS="$CPPFLAGS -I$(brew --prefix)/include"
+export LDFLAGS="$LDFLAGS -L$(brew --prefix)/lib" 
+export CFLAGS="$CFLAGS -I$(brew --prefix)/include" 
+export CPPFLAGS="$CPPFLAGS -I$(brew --prefix)/include"
 export LD_LIBRARY_PATH="/usr/local/lib"
+export PKG_CONFIG_PATH="/opt/homebrew/lib/pkgconfig"
 
 # Plugins
 source /opt/homebrew/share/antigen/antigen.zsh
@@ -30,6 +31,9 @@ alias v="nvim"
 alias gg="lazygit"
 alias rm="trash"
 alias idf='. $HOME/dev/esp-idf/export.sh'
+alias rv='docker run -i -t --rm -v `pwd`:/root ghcr.io/sampsyo/cs3410-infra'
+alias rvgcc='rv gcc -Wall -Wextra -Wpedantic -Wshadow -Wformat=2 -std=c17'
+alias rvrun='rv qemu'
 
 # Initiailize functions
 mdcd ()
