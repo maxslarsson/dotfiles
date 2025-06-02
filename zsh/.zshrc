@@ -31,7 +31,7 @@ alias v="nvim"
 alias gg="lazygit"
 alias rm="trash"
 alias idf='. $HOME/dev/esp-idf/export.sh'
-alias rv='docker run -i -t --rm -v `pwd`:/root ghcr.io/sampsyo/cs3410-infra'
+alias rv='docker run -i --rm -v `pwd`:/root ghcr.io/sampsyo/cs3410-infra'
 alias rvgcc='rv gcc -Wall -Wextra -Wpedantic -Wshadow -Wformat=2 -std=c17'
 alias rvrun='rv qemu'
 
@@ -71,3 +71,19 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+# fnm
+FNM_PATH="/Users/maxlarsson/Library/Application Support/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="/Users/maxlarsson/Library/Application Support/fnm:$PATH"
+  eval "`fnm env`"
+fi
+
+
+# BEGIN opam configuration
+# This is useful if you're using opam as it adds:
+#   - the correct directories to the PATH
+#   - auto-completion for the opam binary
+# This section can be safely removed at any time if needed.
+[[ ! -r '/Users/maxlarsson/.opam/opam-init/init.zsh' ]] || source '/Users/maxlarsson/.opam/opam-init/init.zsh' > /dev/null 2> /dev/null
+# END opam configuration
