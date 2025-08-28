@@ -34,6 +34,8 @@ alias idf='. $HOME/dev/esp-idf/export.sh'
 alias rv='docker run -i --rm -v `pwd`:/root ghcr.io/sampsyo/cs3410-infra'
 alias rvgcc='rv gcc -Wall -Wextra -Wpedantic -Wshadow -Wformat=2 -std=c17'
 alias rvrun='rv qemu'
+alias renode='mono /Applications/Renode.app/Contents/MacOS/bin/Renode.exe'
+alias renode-test='/Applications/Renode.app/Contents/MacOS/tests/renode-test'
 
 # Initiailize functions
 mdcd ()
@@ -87,3 +89,5 @@ fi
 # This section can be safely removed at any time if needed.
 [[ ! -r '/Users/maxlarsson/.opam/opam-init/init.zsh' ]] || source '/Users/maxlarsson/.opam/opam-init/init.zsh' > /dev/null 2> /dev/null
 # END opam configuration
+
+export STM32_PRG_PATH=/Applications/STMicroelectronics/STM32Cube/STM32CubeProgrammer/STM32CubeProgrammer.app/Contents/MacOs/bin
